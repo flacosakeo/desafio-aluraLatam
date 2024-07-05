@@ -1,0 +1,21 @@
+*{
+    margin: 1rem;
+
+}
+
+main{
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.msg-box, .form-box{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 50rem;
+    align-items: center;
+    background-color: white;
+}
+
+
