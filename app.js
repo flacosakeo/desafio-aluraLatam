@@ -1,12 +1,17 @@
 function encriptar (){
+    const acentos = /[á,é,í,ó,ú,Á,É,Í,Ó,Ú]/;
     if (/[A-Z0-9]/.test(document.getElementById('input-texto').value)) {
         alert('Por favor, ingrese solo letras minúsculas.');
     }else{
-        var texto = document.querySelector("#input-texto").value;
-        var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai")
-                           .replace(/o/gi, "ober").replace(/u/gi, "ufat");
-        document.querySelector("#msg").value = textoCifrado;
-        document.querySelector("#input-texto").value;
+        if (acentos.test(document.getElementById('input-texto').value)){
+            alert('Por favor no ingrese palabras con acento.')
+        }else{
+            var texto = document.querySelector("#input-texto").value;
+            var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai")
+                            .replace(/o/gi, "ober").replace(/u/gi, "ufat");
+            document.querySelector("#msg").value = textoCifrado;
+            document.querySelector("#input-texto").value;
+        }
     }
 }
     
